@@ -13,6 +13,26 @@
 //інакше виводити рядок "Невірний пароль!"
 // const userRule = prompt("Введіть логін");
 
+// const userRule = prompt('Введіть логін');
+// let password;
+
+// function getLoginPassword() {
+//   if (userRule === 'Адмін') {
+//     password = prompt('Введіть пароль');
+//     if (password === 'Я головний') {
+//       alert('Добрий день!');
+//     } else {
+//       alert('Невірний пароль');
+//     }
+//   } else if (userRule === null) {
+//     alert('Скасовано');
+//   } else {
+//     alert('Я вас не знаю');
+//   }
+// }
+
+// getLoginPassword();
+
 //TODO:===================================
 //Напишіть цикл, який пропонує ввести
 //число більше 100 через prompt.
@@ -46,9 +66,22 @@
 
 // console.log('2' + 2);
 
-//Задачка про суму цифр: Напиши функцію, яка приймає число як вхідний параметр і повертає суму всіх його цифр. Наприклад, для числа 123 результат повинен бути 6 (1 + 2 + 3).
-//Задачка про перемішування слів: Напиши функцію, яка приймає рядок як вхідний параметр і повертає рядок з перемішаними літерами кожного слова. Наприклад, для рядка "Hello World" результат може бути "oHlle oWldr".
-//Задачка про факторіал: Напиши функцію, яка приймає ціле число як вхідний параметр і повертає його факторіал. Факторіал числа n - це добуток всіх цілих чисел від 1 до n. Наприклад, факторіал числа 5 дорівнює 120 (1 * 2 * 3 * 4 * 5).
+//TODO://Задачка про суму цифр: Напиши функцію, яка приймає число як вхідний параметр і повертає суму всіх його цифр. Наприклад, для числа 123 результат повинен бути 6 (1 + 2 + 3).
+
+// function calculateSumNumbers(number) {
+//   let total = 0;
+//   let numberString = number.toString();
+
+//   for (let i = 0; i < numberString.length; i++) {
+//     total += parseInt(numberString[i], 10);
+//   }
+//   return total;
+// }
+
+// console.log(calculateSumNumbers(123));
+
+//TODO://Задачка про перемішування слів: Напиши функцію, яка приймає рядок як вхідний параметр і повертає рядок з перемішаними літерами кожного слова. Наприклад, для рядка "Hello World" результат може бути "oHlle oWldr".
+//TODO://Задачка про факторіал: Напиши функцію, яка приймає ціле число як вхідний параметр і повертає його факторіал. Факторіал числа n - це добуток всіх цілих чисел від 1 до n. Наприклад, факторіал числа 5 дорівнює 120 (1 * 2 * 3 * 4 * 5).
 
 // function getLastElementMeta(array) {
 //   return [array.length, array[array.length - 1]];
@@ -198,3 +231,116 @@
 // const lastTag = apartment.tags[apartment.tags.length - 1];
 
 // console.log(lastTag);
+
+// let num = 10;
+// function check() {
+//   num = 20;
+//   return num;
+// }
+// check();
+// console.log(num);
+
+// let arr = [];
+
+// console.log(fillArray(2, 10));
+
+// function fillArray(min, max) {
+//   for (let i = min; i <= max; i += 2) {
+//     return arr.push(i);
+//   }
+// }
+
+// function getCommonElements(array1, array2) {
+//   let emptyArray = [];
+//   for (let i = 0; i < array1.length; i += 1) {
+//     if (array2.includes(array1[i])) {
+//       emptyArray.push(array1[i]);
+//     }
+//   }
+//   return emptyArray;
+// }
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
+
+// const fruits = [':mango:', ':pineapple:', ':banana:', ':avocado:', ':grapes:'];
+// for (let i = 0; i < fruits.length; i++) {
+//   const s = `${i + 1}:${fruits[i]}`;
+//   console.log(s);
+// }
+
+// const user = {
+//   firstName: 'Jacob',
+//   lastName: 'Mercer',
+// };
+
+// console.log(user['firstName']);
+
+// const apartment = {
+//   imgUrl: 'https://via.placeholder.com/640x480',
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+//   tags: ['premium', 'promoted', 'top'],
+//   owner: {
+//     name: 'Henry',
+//     phone: '982-126-1588',
+//     email: 'henry.carter@aptmail.com',
+//   },
+// };
+
+// apartment.price = 5000;
+// apartment.rating = 4.7;
+// apartment.owner.name = 'Henry Sibola';
+// apartment.tags.push('trusted');
+
+// console.log(typeof apartment.tags);
+
+// const apartment = {
+//   imgUrl: 'https://via.placeholder.com/640x480',
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4.7,
+//   price: 5000,
+//   tags: ['premium', 'promoted', 'top', 'trusted'],
+//   owner: {
+//     name: 'Henry Sibola',
+//     phone: '982-126-1588',
+//     email: 'henry.carter@aptmail.com',
+//   },
+// };
+
+// apartment.area = 60;
+// apartment.rooms = 3;
+// apartment.location = {
+//   country: 'Jamaica',
+//   city: 'Kingston',
+// };
+
+// console.log(apartment.location);
+
+//Умова задачі:
+//Дано масив чисел. Знайди суму всіх парних чисел у цьому масиві.
+
+// function getNumbers(numbers) {
+//   for (let item of numbers) {
+//     const sum = [];
+//     if (item % 2 === 0) {
+//       sum.includes(item);
+//       console.log(item);
+//     } else {
+//       console.log('error!!');
+//     }
+//   }
+//   return numbers;
+// }
+
+// console.log(getNumbers([4, 7, 23, 40, 34, 45, 23, 60]));
+
+// const emailInputName = 'email';
+// const passwordInputName = 'password';
+
+// const credentials = {
+//   [emailInputName]: 'henry.carter@aptmail.com',
+//   [passwordInputName]: 'jqueryismyjam',
+// };
+
+// console.log(credentials);
