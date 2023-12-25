@@ -327,13 +327,30 @@
 //       sum.includes(item);
 //       console.log(item);
 //     } else {
-//       console.log('error!!');
+//       console.log('це не парне!!');
 //     }
 //   }
 //   return numbers;
 // }
 
 // console.log(getNumbers([4, 7, 23, 40, 34, 45, 23, 60]));
+
+// Умова задачі:
+// Дано масив чисел. Треба вивести на екран всі парні числа.
+
+// Вхідні дані:
+// const numbers = [1, 3, 5, 2, 4, 6];
+
+// Ваше завдання:
+// Використовуючи цикл for, створіть програму,
+// яка виводить на екран всі парні числа з масиву numbers.
+
+// Ваш код:
+// for (let i = 0; i < numbers.length; i++) {
+//   if (numbers[i] % 2 === 0) {
+//     console.log(numbers[i]);
+//   }
+// }
 
 // const emailInputName = 'email';
 // const passwordInputName = 'password';
@@ -344,3 +361,138 @@
 // };
 
 // console.log(credentials);
+
+// const colors = [
+//   { hex: '#f44336', rgb: '244,67,54' },
+//   { hex: '#2196f3', rgb: '33,150,243' },
+//   { hex: '#4caf50', rgb: '76,175,80' },
+//   { hex: '#ffeb3b', rgb: '255,235,59' },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+
+// for (let item of colors) {
+//   hexColors.push(item.hex);
+//   rgbColors.push(item.rgb);
+// }
+
+// console.log(hexColors);
+// console.log(rgbColors);
+
+// function getProductPrice(productName) {
+//   const products = [
+//     { name: 'Radar', price: 1300, quantity: 4 },
+//     { name: 'Scanner', price: 2700, quantity: 3 },
+//     { name: 'Droid', price: 400, quantity: 7 },
+//     { name: 'Grip', price: 1200, quantity: 9 },
+//   ];
+//   for (let product of products) {
+//     if (product.name === productName) {
+//       return product.price;
+//     } else {
+//     }
+//   }
+//   return null;
+// }
+
+// console.log(getProductPrice('Radar'));
+// console.log(getProductPrice('Scanner'));
+// console.log(getProductPrice('Grip'));
+
+// const book = {
+//   title: 'The Last Kingdom',
+//   author: 'Bernard Cornwell',
+//   genres: ['historical prose', 'adventure'],
+//   rating: 8.38,
+// };
+
+// for (const key in book) {
+//   console.log(key); // Ключ
+//   console.log(book[key]); // Значення властивості з таким ключем
+// }
+
+// const apartment = {
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+// };
+
+// const keys = [];
+// const values = [];
+
+// for (const key in apartment) {
+//   keys.push(key);
+//   values.push(apartment[key]);
+// }
+
+// const apartment = {
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+// };
+// const values = [];
+// const keys = Object.keys(apartment);
+
+// for (let key of keys) {
+//   values.push(apartment[key]);
+// }
+
+// console.log(values);
+
+// function countProps(object) {
+//   let propCount = 0;
+
+//   for (const key in object) {
+//     if (Object.keys(propCount)) {
+//       propCount += 1;
+//     }
+//   }
+
+//   return propCount;
+// }
+
+// console.log(countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 }));
+// console.log(countProps({ name: 'Mango', age: 2 }));
+// console.log(countProps({}));
+
+// const apartment = {
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+// };
+
+// const keys = Object.keys(apartment);
+// const values = Object.values(apartment);
+
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   let values = Object.values(salaries);
+//   for (let value in values) {
+//     totalSalary += values[value];
+//   }
+//   return totalSalary;
+// }
+
+// console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));
+// console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
+
+function getAllPropValues(propName) {
+  const products = [
+    { name: 'Radar', price: 1300, quantity: 4 },
+    { name: 'Scanner', price: 2700, quantity: 3 },
+    { name: 'Droid', price: 400, quantity: 7 },
+    { name: 'Grip', price: 1200, quantity: 9 },
+  ];
+
+  let emptyArray = [];
+  let values = Object.values(propName);
+
+  for (let item of products) {
+    emptyArray.push(item);
+  }
+  return emptyArray;
+}
+
+console.log(getAllPropValues('name'));
+console.log(getAllPropValues('price'));
