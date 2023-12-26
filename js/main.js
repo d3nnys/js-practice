@@ -477,22 +477,145 @@
 // console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));
 // console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
 
-function getAllPropValues(propName) {
-  const products = [
-    { name: 'Radar', price: 1300, quantity: 4 },
-    { name: 'Scanner', price: 2700, quantity: 3 },
-    { name: 'Droid', price: 400, quantity: 7 },
-    { name: 'Grip', price: 1200, quantity: 9 },
-  ];
+// function getAllPropValues(propName) {
+//   const products = [
+//     { name: 'Radar', price: 1300, quantity: 4 },
+//     { name: 'Scanner', price: 2700, quantity: 3 },
+//     { name: 'Droid', price: 400, quantity: 7 },
+//     { name: 'Grip', price: 1200, quantity: 9 },
+//   ];
 
-  let emptyArray = [];
-  let values = Object.values(propName);
+//   const objectValues = [];
 
-  for (let item of products) {
-    emptyArray.push(item);
-  }
-  return emptyArray;
-}
+//   for (let product of products) {
+//     if (product.hasOwnProperty(propName)) {
+//       objectValues.push(product[propName]);
+//     }
+//   }
+//   return objectValues;
+// }
 
-console.log(getAllPropValues('name'));
-console.log(getAllPropValues('price'));
+// console.log(getAllPropValues('name'));
+// console.log(getAllPropValues('price'));
+// console.log(getAllPropValues('quantity'));
+
+// function calculateTotalPrice(productName) {
+//   const products = [
+//     { name: 'Radar', price: 1300, quantity: 4 },
+//     { name: 'Scanner', price: 2700, quantity: 3 },
+//     { name: 'Droid', price: 400, quantity: 7 },
+//     { name: 'Grip', price: 1200, quantity: 9 },
+//   ];
+
+//   for (let i = 0; i < products.length; i++) {
+//     const product = products[i];
+
+//     if (product.name === productName) {
+//       return product.price * product.quantity;
+//     }
+//   }
+//   return `Product ${productName} not found!`;
+// }
+// console.log(calculateTotalPrice('Radar'));
+// console.log(calculateTotalPrice('Blaster'));
+// console.log(calculateTotalPrice('Scanner'));
+
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   // let values = Object.values(salaries);
+
+//   for (let value of Object.values(salaries)) {
+//     totalSalary += value;
+//   }
+//   return totalSalary;
+// }
+
+// console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));
+// console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
+
+// // ✅ Логічно й синтаксично згруповані сутності
+// const bookShelf = {
+//   books: ['The Last Kingdom', 'Dream Guardian'],
+//   // Це метод об'єкта
+//   getBooks() {
+//     return 'Returning all books';
+//   },
+//   // Це метод об'єкта
+//   addBook(bookName) {
+//     return `Adding book ${bookName}`;
+//   },
+// };
+
+// // Виклики методів
+// bookShelf.getBooks(); // поверне "Returning all books"
+// bookShelf.addBook('New book 1'); // поверне "Adding book New book 1"
+// bookShelf.addBook('New book 2'); // поверне "Adding book New book 2"
+
+// const atTheOldToad = {
+//   potions: [],
+//   getPotions() {
+//     return 'List of all available potions';
+//   },
+//   addPotions(potionName) {
+//     return `Adding ${potionName}`;
+//   },
+// };
+
+// const bookShelf = {
+//   books: ['The Last Kingdom'],
+//   getBooks() {
+//     return this.books;
+//   },
+//   addBook(bookName) {
+//     this.books.push(bookName);
+//   },
+// };
+
+// console.log(bookShelf.getBooks()); // ["The Last Kingdom"]
+// bookShelf.addBook('The Mist');
+// bookShelf.addBook('Dream Guardian');
+// console.log(bookShelf.getBooks()); // ["The Last Kingdom", "The Mist", "Dream Guardian"]
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: 'Speed potion', price: 460 },
+//     { name: 'Stone skin', price: 520 },
+//   ],
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     this.potions.push(newPotion);
+//   },
+//   getTotalPrice() {
+//     let totalPrice = 0;
+
+//     for (let potion of this.potions) {
+//       totalPrice += potion.price;
+//     }
+//     return totalPrice;
+//   },
+// };
+
+// function add(args) {
+//   return args;
+// }
+
+// console.log(add(1, 2, 3));
+// console.log(...[1, 2, 3]);
+
+//TODO:======================================== жаба-гадюка
+// function getExtremeScores(scores) {
+//   const extremeScores = {
+//     best: 0,
+//     worst: 0,
+//   };
+
+//   for (let score of scores) {
+//     extremeScores.best = Math.max(...scores);
+//     extremeScores.worst = Math.min(...scores);
+//   }
+//   return extremeScores;
+// }
+// console.log(getExtremeScores([19, 7, 4, 17, 81, 24]));
+//TODO:========================================

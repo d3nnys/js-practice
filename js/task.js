@@ -62,3 +62,46 @@
 //   }
 // }
 // console.log(getNames('john', 'maria'));
+
+// function calculateTotalPrice(productName) {
+//   const products = [
+//     { name: 'Radar', price: 1300, quantity: 4 },
+//     { name: 'Scanner', price: 2700, quantity: 3 },
+//     { name: 'Droid', price: 400, quantity: 7 },
+//     { name: 'Grip', price: 1200, quantity: 9 },
+//   ];
+
+//   for (let i = 0; i < products.length; i++) {
+//     const product = products[i];
+
+//     if (product.name === productName) {
+//       return product.price * product.quantity;
+//     }
+//   }
+//   return `Product ${productName} not found!`;
+// }
+// console.log(calculateTotalPrice('Radar'));
+// console.log(calculateTotalPrice('Blaster'));
+// console.log(calculateTotalPrice('Scanner'));
+
+// function getAllPropValues(propName) {
+//   const products = [
+//     { name: 'Radar', price: 1300, quantity: 4 },
+//     { name: 'Scanner', price: 2700, quantity: 3 },
+//     { name: 'Droid', price: 400, quantity: 7 },
+//     { name: 'Grip', price: 1200, quantity: 9 },
+//   ];
+
+//   const objectValues = [];
+
+//   for (let product of products) {
+//     if (product.hasOwnProperty(propName)) {
+//       objectValues.push(product[propName]);
+//     }
+//   }
+//   return objectValues;
+// }
+
+// console.log(getAllPropValues('name'));
+// console.log(getAllPropValues('price'));
+// console.log(getAllPropValues('quantity'));
