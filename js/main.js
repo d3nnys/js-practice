@@ -619,3 +619,132 @@
 // }
 // console.log(getExtremeScores([19, 7, 4, 17, 81, 24]));
 //TODO:========================================
+
+// const objA = {
+//   x: 1,
+//   y: 2,
+// };
+
+// const objB = {
+//   y: 3,
+// };
+
+// const result = {
+//   x: 5,
+//   ...objA,
+//   y: 10,
+//   ...objB,
+//   z: 15,
+// };
+
+// console.log(result);
+
+// function deliverPizza(pizzaName) {
+//   return `Delivering ${pizzaName} pizza.`;
+// }
+
+// function makePizza(pizzaName) {
+//   return `Pizza ${pizzaName} is being prepared, please wait...`;
+// }
+
+// function makeMessage(pizzaName, callback) {
+//   return callback(pizzaName);
+// }
+
+// function makePizza(pizzaName, callback) {
+//   console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+//   callback(pizzaName);
+// }
+
+// makePizza('Royal Grand', function deliverPizza(pizzaName) {
+//   console.log(`Delivering pizza ${pizzaName}`);
+// });
+
+// makePizza('Ultracheese', function eatPizza(pizzaName) {
+//   console.log(`Eating pizza ${pizzaName}`);
+// });
+
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+
+//   orderedItems.forEach(function (price) {
+//     totalPrice += price;
+//   });
+
+//   return totalPrice;
+// }
+
+// function filterArray(numbers, value) {
+//   let finallyArray = [];
+//   numbers.forEach(function (number) {
+//     if (number > value) {
+//       finallyArray.push(number);
+//     }
+//   });
+//   return finallyArray;
+// }
+
+// console.log(filterArray(finallyArray));
+
+// const calculateTotalPrice = orderedItems => {
+//   const totalPrice = orderedItems.reduce((sum, item) => {
+//     return sum + item;
+//   }, 0);
+
+//   return totalPrice;
+// };
+
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+// function changeEven(numbers, value) {
+//   const emptyArray = [];
+//   numbers.forEach(element => {
+//     emptyArray.push((element += value));
+//   });
+//   return emptyArray;
+// }
+
+// function changeEven(numbers, value) {
+//   const lastArray = [];
+
+//   for (let i = 0; i < numbers.length; i += 1) {
+//     lastArray[i] = numbers[i] % 2 === 0 ? numbers[i] + value : numbers[i];
+//   }
+//   return lastArray;
+// }
+
+// console.log(changeEven([2, 8, 3, 7, 4, 6], 10));
+// console.log(changeEven([17, 24, 68, 31, 42], 100));
+// console.log(changeEven([44, 13, 81, 92, 36, 54], 100));
+// console.log(changeEven([1, 2, 3, 4, 5], 10));
+
+// const pureMultiply = (array, value) => {
+//   const newArray = [];
+
+//   array.forEach(element => {
+//     newArray.push(element * value);
+//   });
+
+//   return newArray;
+// };
+
+// const planets = ['Earth', 'Mars', 'Venus', 'Jupiter'];
+
+// const planetsLengths = planets.map(planet => planet.length);
+
+// console.log(planetsLengths);
+
+// const getUserEmails = users => users.map(user => user.email);
+
+// console.log([
+//   'moorehensley@indexia.com',
+//   'sharlenebush@tubesys.com',
+//   'rossvazquez@xinware.com',
+//   'elmahead@omatom.com',
+//   'careybarr@nurali.com',
+//   'blackburndotson@furnigeer.com',
+//   'shereeanthony@kog.com',
+// ]);
+
+// const getUsersWithEyeColor = (users, color) =>
+//   users.filter(user => user.eyeColor === color);
