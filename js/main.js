@@ -1,16 +1,16 @@
-//TODO:===================================
-//Напишіть код, який запитуватиме
-//логін за допомогою prompt і логувати результат
-//в консоль браузера
-//Якщо відвідувач вводить "Адмін",
-//то prompt запитує пароль.
-//Якщо нічого не ввели або натиснута клавіша Esc
-//Вивести стороку "Скасовано"
+// TODO:===================================
+// Напишіть код, який запитуватиме
+// логін за допомогою prompt і логувати результат
+// в консоль браузера
+// Якщо відвідувач вводить "Адмін",
+// то prompt запитує пароль.
+// Якщо нічого не ввели або натиснута клавіша Esc
+// Вивести стороку "Скасовано"
 // Інакше вивести рядок "Я вас не знаю"
-//Пароль перевіряти так:
-//Якщо введено пароль "Я головний",
-//то вивести рядок "Добрий день!"
-//інакше виводити рядок "Невірний пароль!"
+// Пароль перевіряти так:
+// Якщо введено пароль "Я головний",
+// то вивести рядок "Добрий день!"
+// інакше виводити рядок "Невірний пароль!"
 // const userRule = prompt("Введіть логін");
 
 // const userRule = prompt('Введіть логін');
@@ -33,25 +33,25 @@
 
 // getLoginPassword();
 
-//TODO:===================================
-//Напишіть цикл, який пропонує ввести
-//число більше 100 через prompt.
-//Якщо відвідувач ввів інше число - попросити
-//ввести ще раз і так далі.
-//Цикл має питати число, поки відвідувач не
-//введе число більше 100, або натисне кнопку
-//скасування в prompt
+// TODO:===================================
+// Напишіть цикл, який пропонує ввести
+// число більше 100 через prompt.
+// Якщо відвідувач ввів інше число - попросити
+// ввести ще раз і так далі.
+// Цикл має питати число, поки відвідувач не
+// введе число більше 100, або натисне кнопку
+// скасування в prompt
 
-//TODO:===================================
-//При завантаженні сторінки користувачеві пропонується
-//в prompt ввести число. Введення додається до значення
-//змінної total.
-//Операція введення числа триває до того часу,
-//поки користувач не натисне кнопку Cancel в prompt.
-//Після того, як користувач припинив введення натиснувши на
-//кнопку Cancel, показати alert з рядком "Загальна сума введених чисел дорівнює [число]."
-//Робити перевірку,що користувач ввів саме число,
-//а не довільний набір символів, не потрібно.
+// TODO:===================================
+// При завантаженні сторінки користувачеві пропонується
+// в prompt ввести число. Введення додається до значення
+// змінної total.
+// Операція введення числа триває до того часу,
+// поки користувач не натисне кнопку Cancel в prompt.
+// Після того, як користувач припинив введення натиснувши на
+// кнопку Cancel, показати alert з рядком "Загальна сума введених чисел дорівнює [число]."
+// Робити перевірку,що користувач ввів саме число,
+// а не довільний набір символів, не потрібно.
 
 // console.log(factorial(6));
 // Надіюсь, ці завдання допоможуть тобі практикуватись з JavaScript! Якщо у тебе є будь-які додаткові запитання або якщо ти хочеш ще завдань, звертайся.
@@ -66,7 +66,7 @@
 
 // console.log('2' + 2);
 
-//TODO://Задачка про суму цифр: Напиши функцію, яка приймає число як вхідний параметр і повертає суму всіх його цифр. Наприклад, для числа 123 результат повинен бути 6 (1 + 2 + 3).
+// TODO://Задачка про суму цифр: Напиши функцію, яка приймає число як вхідний параметр і повертає суму всіх його цифр. Наприклад, для числа 123 результат повинен бути 6 (1 + 2 + 3).
 
 // function calculateSumNumbers(number) {
 //   let total = 0;
@@ -80,8 +80,8 @@
 
 // console.log(calculateSumNumbers(123));
 
-//TODO://Задачка про перемішування слів: Напиши функцію, яка приймає рядок як вхідний параметр і повертає рядок з перемішаними літерами кожного слова. Наприклад, для рядка "Hello World" результат може бути "oHlle oWldr".
-//TODO://Задачка про факторіал: Напиши функцію, яка приймає ціле число як вхідний параметр і повертає його факторіал. Факторіал числа n - це добуток всіх цілих чисел від 1 до n. Наприклад, факторіал числа 5 дорівнює 120 (1 * 2 * 3 * 4 * 5).
+// TODO://Задачка про перемішування слів: Напиши функцію, яка приймає рядок як вхідний параметр і повертає рядок з перемішаними літерами кожного слова. Наприклад, для рядка "Hello World" результат може бути "oHlle oWldr".
+// TODO://Задачка про факторіал: Напиши функцію, яка приймає ціле число як вхідний параметр і повертає його факторіал. Факторіал числа n - це добуток всіх цілих чисел від 1 до n. Наприклад, факторіал числа 5 дорівнює 120 (1 * 2 * 3 * 4 * 5).
 
 // function getLastElementMeta(array) {
 //   return [array.length, array[array.length - 1]];
@@ -264,7 +264,7 @@
 
 // const fruits = [':mango:', ':pineapple:', ':banana:', ':avocado:', ':grapes:'];
 // for (let i = 0; i < fruits.length; i++) {
-//   const s = `${i + 1}:${fruits[i]}`;
+//   const s = ${i + 1}:${fruits[i]};
 //   console.log(s);
 // }
 
@@ -317,8 +317,8 @@
 
 // console.log(apartment.location);
 
-//Умова задачі:
-//Дано масив чисел. Знайди суму всіх парних чисел у цьому масиві.
+// Умова задачі:
+// Дано масив чисел. Знайди суму всіх парних чисел у цьому масиві.
 
 // function getNumbers(numbers) {
 //   for (let item of numbers) {
@@ -514,7 +514,7 @@
 //       return product.price * product.quantity;
 //     }
 //   }
-//   return `Product ${productName} not found!`;
+//   return Product ${productName} not found!;
 // }
 // console.log(calculateTotalPrice('Radar'));
 // console.log(calculateTotalPrice('Blaster'));
@@ -542,7 +542,7 @@
 //   },
 //   // Це метод об'єкта
 //   addBook(bookName) {
-//     return `Adding book ${bookName}`;
+//     return Adding book ${bookName};
 //   },
 // };
 
@@ -557,7 +557,7 @@
 //     return 'List of all available potions';
 //   },
 //   addPotions(potionName) {
-//     return `Adding ${potionName}`;
+//     return Adding ${potionName};
 //   },
 // };
 
@@ -604,7 +604,7 @@
 // console.log(add(1, 2, 3));
 // console.log(...[1, 2, 3]);
 
-//TODO:======================================== жаба-гадюка
+// TODO:======================================== жаба-гадюка
 // function getExtremeScores(scores) {
 //   const extremeScores = {
 //     best: 0,
@@ -618,7 +618,7 @@
 //   return extremeScores;
 // }
 // console.log(getExtremeScores([19, 7, 4, 17, 81, 24]));
-//TODO:========================================
+// TODO:========================================
 
 // const objA = {
 //   x: 1,
@@ -640,11 +640,11 @@
 // console.log(result);
 
 // function deliverPizza(pizzaName) {
-//   return `Delivering ${pizzaName} pizza.`;
+//   return Delivering ${pizzaName} pizza.;
 // }
 
 // function makePizza(pizzaName) {
-//   return `Pizza ${pizzaName} is being prepared, please wait...`;
+//   return Pizza ${pizzaName} is being prepared, please wait...;
 // }
 
 // function makeMessage(pizzaName, callback) {
@@ -652,16 +652,16 @@
 // }
 
 // function makePizza(pizzaName, callback) {
-//   console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+//   console.log(Pizza ${pizzaName} is being prepared, please wait...);
 //   callback(pizzaName);
 // }
 
 // makePizza('Royal Grand', function deliverPizza(pizzaName) {
-//   console.log(`Delivering pizza ${pizzaName}`);
+//   console.log(Delivering pizza ${pizzaName});
 // });
 
 // makePizza('Ultracheese', function eatPizza(pizzaName) {
-//   console.log(`Eating pizza ${pizzaName}`);
+//   console.log(Eating pizza ${pizzaName});
 // });
 
 // function calculateTotalPrice(orderedItems) {
@@ -748,3 +748,253 @@
 
 // const getUsersWithEyeColor = (users, color) =>
 //   users.filter(user => user.eyeColor === color);
+
+// const getUsersWithAge = (users, minAge, maxAge) =>
+//   users.filter(user => user.age >= minAge && user.age <= maxAge);
+
+// const getUserWithEmail = (users, email) =>
+//   users.find(user => (user.email === email ? user.name : false));
+
+// function changeEven(numbers, value) {
+//   const lastArray = numbers.map(number =>
+//     number % 2 === 0 ? number + value : number
+//   );
+
+//   return lastArray;
+// }
+
+// console.log(changeEven([2, 8, 3, 7, 4, 6], 10));
+// console.log(changeEven([17, 24, 68, 31, 42], 100));
+// console.log(changeEven([44, 13, 81, 92, 36, 54], 100));
+// console.log(changeEven([1, 2, 3, 4, 5], 10));
+
+// const getUserWithEmail = (users, email) => {
+//   return users.find(user => user.email == email);
+// };
+
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+
+//   orderedItems.forEach(function price (totalPrice += price));
+
+//   return totalPrice;
+// }
+
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+
+//   orderedItems.forEach(function callback(price) {
+//     totalPrice += price;
+//   });
+
+//   return totalPrice;
+// }
+
+// console.log(calculateTotalPrice([164, 48, 291]));
+
+// const calculateTotalPrice = orderedItems => {
+//   let totalPrice = 0;
+
+//   orderedItems.forEach(item => (totalPrice += item));
+
+//   return totalPrice;
+// };
+
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+
+// function changeEven(numbers, value) {
+//   const lastArray = [];
+
+//   numbers.forEach(number => {
+//     if (number % 2 === 0) {
+//       lastArray.push(number + value);
+//     } else {
+//       lastArray.push(number);
+//     }
+//   });
+
+//   return lastArray;
+// }
+
+// console.log(changeEven([2, 8, 3, 7, 4, 6], 10));
+// console.log(changeEven([17, 24, 68, 31, 42], 100));
+// console.log(changeEven([44, 13, 81, 92, 36, 54], 100));
+// console.log(changeEven([1, 2, 3, 4, 5], 10));
+
+//  for (let i = 0; i < numbers.length; i += 1) {
+//    lastArray[i] = numbers[i] % 2 === 0 ? numbers[i] + value : numbers[i];
+//  }
+
+// number % 2 === 0 ? lastArray.push(number + value) : lastArray.push(number)
+
+// const isEveryUserActive = users => users.every(user => user.isActive === true);
+
+// console.log(isEveryUserActive);
+
+// const players = [
+//   { name: 'Mango', playtime: 1270, gamesPlayed: 4 },
+//   { name: 'Poly', playtime: 469, gamesPlayed: 2 },
+//   { name: 'Ajax', playtime: 690, gamesPlayed: 3 },
+//   { name: 'Kiwi', playtime: 241, gamesPlayed: 1 },
+// ];
+
+// const totalAveragePlaytimePerGame = players.reduce(
+//   (avrTime, player) => avrTime + player.playtime / player.gamesPlayed,
+//   0
+// );
+
+// console.log(totalAveragePlaytimePerGame);
+
+// const calculateTotalBalance = users => {
+//   return users.reduce((totalBalance, user) => totalBalance + user.balance, 0);
+// };
+
+// const scores = [61, 19, 74, 35, 92, 56];
+// const descendingScores = scores.toSorted((a, b) => b - a);
+// console.log(descendingScores); // [92, 74, 61, 56, 35, 19]
+
+// const authors = [
+//   "Tanith Lee",
+//   "Bernard Cornwell",
+//   "Robert Sheckley",
+//   "Fyodor Dostoevsky",
+//   "Howard Lovecraft",
+// ];
+
+// const authorsInAlphabetOrder = authors.toSorted((a, b) => a.localeCompare(b));
+
+// const authorsInReversedOrder = authors.toSorted((a, b) => b.localeCompare(a));
+
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     rating: 8.51,
+//   },
+//   {
+//     title: 'The Dream of a Ridiculous Man',
+//     author: 'Fyodor Dostoevsky',
+//     rating: 7.75,
+//   },
+//   {
+//     title: 'Redder Than Blood',
+//     author: 'Tanith Lee',
+//     rating: 7.94,
+//   },
+//   {
+//     title: 'Enemy of God',
+//     author: 'Bernard Cornwell',
+//     rating: 8.67,
+//   },
+// ];
+
+// const sortedByAuthorName = books.toSorted((firstName, secondName) =>
+//   firstName.author.localeCompare(secondName.author)
+// );
+
+// const sortedByReversedAuthorName = books.toSorted((firstName, secondName) =>
+//   secondName.author.localeCompare(firstName.author)
+// );
+
+// const sortedByAscendingRating = books.toSorted(
+//   (firstRating, secondRating) => firstRating.rating - secondRating.rating
+// );
+
+// const sortedByDescentingRating = books.toSorted(
+//   (firstRating, secondRating) => secondRating.rating - firstRating.rating
+// );
+
+// const calculateTotalBalance = users => {
+//   users.reduce((total, user) => {
+//     return total + user;
+//   }, 0);
+//   return users;
+// };
+
+//   users.reduce((totalBalance, user) => totalBalance + user.balance, 0)
+// const calculateTotalBalance = users =>
+//   users.reduce((totalBalance, user) => totalBalance + user.balance, 0);
+
+// const books = [
+//   {
+//     title: 'The Last Kingdom',
+//     author: 'Bernard Cornwell',
+//     rating: 8.38,
+//   },
+//   {
+//     title: 'Beside Still Waters',
+//     author: 'Robert Sheckley',
+//     rating: 8.51,
+//   },
+//   {
+//     title: 'The Dream of a Ridiculous Man',
+//     author: 'Fyodor Dostoevsky',
+//     rating: 7.75,
+//   },
+//   { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+//   {
+//     title: 'The Dreams in the Witch House',
+//     author: 'Howard Lovecraft',
+//     rating: 8.67,
+//   },
+// ];
+// const MIN_BOOK_RATING = 8;
+
+// const names = books
+//   .filter(book => book.rating > MIN_BOOK_RATING)
+//   .map(book => book.author)
+//   .toSorted((a, b) => a.localeCompare(b));
+
+// const pizzaPalace = {
+//   pizzas: ['Supercheese', 'Smoked', 'Four meats'],
+//   checkPizza(pizzaName) {
+//     return this.pizzas.includes(pizzaName);
+//   },
+//   order(pizzaName) {
+//     const isPizzaAvailable = this.checkPizza(pizzaName);
+
+//     if (!isPizzaAvailable) {
+//       return `Sorry, there is no pizza named «${pizzaName}»`;
+//     }
+
+//     return `Order accepted, preparing «${pizzaName}» pizza`;
+//   },
+// };
+
+// 'use strict';
+
+// const book = {
+//   updateAuthor(newAuthor) {
+//     console.log(this);
+//   },
+// };
+
+// book.updateAuthor('Jacob');
+
+// function greet(name) {
+//   console.log(`Hello, ${name}! I am ${this.person}`);
+// }
+
+// const person = 'John';
+// const context = {
+//   person: 'Alice',
+// };
+
+// greet.call(context, 'Bob');
+
+function sayHello(greeting) {
+  console.log(`${greeting}, ${this.name}!`);
+}
+
+const user = {
+  name: 'Alice',
+};
+
+const greet = sayHello.bind(user);
+
+greet('Hello');
