@@ -987,14 +987,431 @@
 
 // greet.call(context, 'Bob');
 
-function sayHello(greeting) {
-  console.log(`${greeting}, ${this.name}!`);
-}
+// function sayHello(greeting) {
+//   console.log(`${greeting}, ${this.name}!`);
+// }
 
-const user = {
-  name: 'Alice',
-};
+// const user = {
+//   name: 'Alice',
+// };
 
-const greet = sayHello.bind(user);
+// const greet = sayHello.bind(user);
 
-greet('Hello');
+// greet('Hello');
+
+// const library = {
+//   books: 1923,
+//   logBookCount() {
+//     console.log(this.books);
+//   },
+// };
+
+// const showBooks = library.logBookCount.bind({ books: 724 });
+
+// showBooks();
+
+// 'use strict';
+
+// const library = {
+//   books: 1923,
+//   logBookCount() {
+//     console.log(this.books);
+//   },
+// };
+
+// function showBooks(callback) {
+//   callback();
+// }
+
+// showBooks(library.logBookCount.bind(library));
+
+// const showThis = () => {
+//   console.log('this in showThis: ', this);
+// };
+
+// const user = {
+//   username: 'Mango',
+// };
+
+// user.showContext = showThis;
+
+// user.showContext(); // this in showThis: window
+
+// const a = () => {
+//   console.log(this);
+// };
+
+// function b() {
+//   a();
+// }
+
+// b.call({ user: 'Mango' });
+
+// class User {
+//   constructor({ name, email }) {
+//     this.name = name;
+//     this.email = email;
+//   }
+
+//   getEmail() {
+//     return this.email;
+//   }
+
+//   changeEmail(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+
+// const mango = new User({
+//   name: 'Mango',
+//   email: 'mango@mail.com',
+// });
+
+// console.log(mango.getEmail()); // "mango@mail.com"
+
+// mango.changeEmail('new@mail.com');
+
+// console.log(mango.getEmail()); // "new@mail.com"
+
+// const word = 'something';
+
+// const customWord = `This is ${word}`;
+
+// console.log(customWord);
+
+// class Car {
+//   #brand;
+
+//   constructor({ brand, model, price }) {
+//     this.#brand = brand;
+//     this.model = model;
+//     this.price = price;
+//   }
+
+//   getPrice() {
+//     return this.price;
+//   }
+
+//   changePrice(newPrice) {
+//     this.price = newPrice;
+//   }
+
+//   getBrand() {
+//     return this.#brand;
+//   }
+
+//   changeBrand(newBrand) {
+//     this.#brand = newBrand;
+//   }
+// }
+
+// class MyClass {
+//   static b = 5;
+
+//   constructor(value) {
+//     this.a = value;
+//   }
+// }
+
+// const instance = new MyClass(10);
+// console.log(instance.b);
+
+// class Car {
+//   static maxPrice = 50000;
+
+//   #price;
+
+//   constructor({ price }) {
+//     this.#price = price;
+//   }
+
+//   get price() {
+//     return this.#price;
+//   }
+
+//   set price(newPrice) {
+//     if (newPrice <= Car.maxPrice) {
+//       this.#price = newPrice;
+//     }
+//   }
+// }
+
+// const audi = new Car({ price: 35000 });
+// console.log(audi.price); // 35000
+
+// audi.price = 49000;
+// console.log(audi.price); // 49000
+
+// audi.price = 51000;
+// console.log(audi.price); // 49000
+
+// class Car {
+//   static #maxPrice = 50000;
+
+//   static checkPrice(price) {
+//     return price > Car.#maxPrice
+//       ? 'Error! Price exceeds the maximum'
+//       : 'Success! Price is within acceptable limits';
+//   }
+
+//   constructor({ price }) {
+//     this.price = price;
+//   }
+// }
+
+// const audi = new Car({ price: 36000 });
+// const bmw = new Car({ price: 64000 });
+
+// console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
+// console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
+
+// class User {
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+// class Admin extends User {
+//   static role = { BASIC: 'basic', SUPERUSER: 'superuser' };
+// }
+
+// class User {
+//   email;
+
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+
+// class Admin extends User {
+//   static role = {
+//     BASIC: 'basic',
+//     SUPERUSER: 'superuser',
+//   };
+
+//   constructor({ email, access }) {
+//     super(email);
+//     this.access = access;
+//   }
+// }
+
+// const mango = new Admin({
+//   email: 'mango@mail.com',
+//   access: Admin.role.SUPERUSER,
+// });
+
+// console.log(mango.email); // "mango@mail.com"
+// console.log(mango.access); // "superuser"
+
+// class User {
+//   email;
+
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+// class Admin extends User {
+//   static role = {
+//     BASIC: 'basic',
+//     SUPERUSER: 'superuser',
+//   };
+
+//   blacklistedEmails = [];
+
+//   blacklist(email) {
+//     this.blacklistedEmails.push(email);
+//   }
+
+//   isBlacklisted(email) {
+//     return this.blacklistedEmails.includes(email);
+//   }
+
+//   constructor({ email, access }) {
+//     super(email);
+//     this.access = access;
+//   }
+// }
+
+// const mango = new Admin({
+//   email: 'mango@mail.com',
+//   access: Admin.role.SUPERUSER,
+// });
+
+// console.log(mango.email); // "mango@mail.com"
+// console.log(mango.access); // "superuser"
+
+// mango.blacklist('poly@mail.com');
+// console.log(mango.blacklistedEmails); // ["poly@mail.com"]
+// console.log(mango.isBlacklisted('mango@mail.com')); // false
+// console.log(mango.isBlacklisted('poly@mail.com')); // true
+
+// const heading = document.createElement('h1');
+// heading.classList.add('title');
+// heading.textContent = 'This is a heading';
+// console.log(heading); // <h1 class="title">This is a heading</h1>
+
+// const image = document.createElement('img');
+// image.src = '<https://picsum.photos/id/11/320/240>';
+// image.alt = 'Nature';
+// console.log(image); // <img src="<https://picsum.photos/id/11/320/240>" alt="Nature" />
+
+//FIXME:
+// const singleBtn = document.querySelector('#single');
+
+// const handleClick = () => {
+//   console.log('click event listener callback');
+// };
+
+// singleBtn.addEventListener('click', handleClick);
+
+// // ===============================================
+// const multiBtn = document.querySelector('#multiple');
+
+// const firstCallback = () => {
+//   console.log('First callback!');
+// };
+// const secondCallback = () => {
+//   console.log('Second callback!');
+// };
+// const thirdCallback = () => {
+//   console.log('Third callback!');
+// };
+
+// multiBtn.addEventListener('click', firstCallback);
+// multiBtn.addEventListener('click', secondCallback);
+// multiBtn.addEventListener('click', thirdCallback);
+//FIXME:
+
+// const categories = document.getElementById('categories');
+// const titles = document.querySelectorAll('h2');
+// titles.forEach(title => title.classList.add('title'));
+
+// const listItem = categories.querySelectorAll;
+
+// const liEl = categories.querySelectorAll('li');
+
+// liEl.forEach(li => {
+//   if (li.classList.length === 0) {
+//     li.classList.add('list-item');
+//   }
+// });
+
+// const book = {
+//   title: 'The Last Kingdom',
+//   author: 'Bernard Cornwell',
+//   genres: ['historical prose', 'adventure'],
+//   isPublic: true,
+//   rating: 8.38,
+// };
+
+// // Деструктуризуємо
+// const { title, author: bookAuthor, isPublic, rating: bookRating } = book;
+// console.log(title); // "The Last Kingdom"
+// console.log(bookAuthor); // "Bernard Cornwell"
+// console.log(isPublic); // true
+// console.log(bookRating); // 8.38
+
+// const user = {
+//   name: 'Jacques Gluke',
+//   tag: 'jgluke',
+//   stats: {
+//     followers: 5603,
+//     views: 4827,
+//     likes: 1308,
+//   },
+// };
+
+// const {
+//   name,
+//   tag,
+//   stats: { followers = 0, views: userViews = 0, likes: userLikes = 0 },
+// } = user;
+
+// console.log(name); // Jacques Gluke
+// console.log(tag); // jgluke
+// console.log(followers); // 5603
+// console.log(userViews); // 4827
+// console.log(userLikes); // 1308
+
+// const color = [200, 255, 150];
+// const [red, green, blue] = color;
+
+// console.log(`rgb(${red}, ${green}, ${blue})`); // “rgb(200, 255, 150)"
+
+// const targetImage = event.target.closest('.gallery-item');
+
+//TODO:
+// if (!targetImage) {
+//   return;
+// }
+
+// const imageSource = targetImage.querySelector('.gallery-image').dataset.source;
+
+// let currentImage = images.find(item => item.original == imageSource);
+//TODO:
+
+// const data = JSON.parse('{username: "Mango"}'); // Error
+// console.log("❌ You won't see this log");
+
+// const settings = 214;
+// localStorage.setItem('settings', '25');
+
+// const savedSettings = localStorage.getItem('settings');
+// console.log(savedSettings); // A string
+
+// const parsedSettings = JSON.parse(settings);
+// console.log(parsedSettings); // Settings object
+
+// function inputHandler(event) {
+//     const { name, value } = event.target;
+//     const takesValue = JSON.parse(localStorage.getItem(storageKey)) || {};
+//     takesValue[name] = value.trim();
+//     localStorage.setItem(storageKey, JSON.stringify(takesValue));
+// }
+
+// refs.form.addEventListener('input', inputHandler);
+// refs.form.addEventListener('submit', submitHandler);
+
+// function submitHandler(event) {
+//     event.preventDefault();
+//     const takesValue = JSON.parse(localStorage.getItem(storageKey)) || {};
+//     console.log({
+//         email: takesValue.email,
+//         message: takesValue.message,
+//     });
+
+//     localStorage.removeItem(storageKey);
+//     refs.input.value = '';
+//     refs.textarea.value = '';
+// }
+
+// const p1 = Promise.resolve(1);
+// const p2 = Promise.reject("Rejected promise 2");
+// const p3 = Promise.resolve(3);
+
+// Promise.all([p1, p2, p3])
+// 	.then(values => console.log(values))
+// 	.catch(error => console.log(error)); // "Rejected promise 2"

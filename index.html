@@ -4,13 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Practice</title>
+    <link rel="stylesheet" href="./css/style.css" />
     <style>
       body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+        padding: 1rem;
+        text-align: center;
+
         background-color: black;
       }
     </style>
   </head>
   <body>
+    <p><a class="main-link" href="game.html">Game</a></p>
+
+    <button id="single" class="btn">SINGLE CALLBACK</button>
+    <hr />
+    <button id="multiple" class="btn">MULTIPLE CALLBACKS</button>
     <script src="./js/main.js" type="module"></script>
     <script src="./js/task.js" type="module"></script>
   </body>
